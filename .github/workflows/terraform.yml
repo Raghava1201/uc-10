@@ -58,7 +58,7 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v2.0.3
         with:
-          terraform_version: ">= 1.12.0"
+          terraform_version: ">= 1.12.1"
 
       - name: Initialize Terraform
         run: terraform init
@@ -73,7 +73,7 @@ jobs:
         working-directory: ./
 
       - name: Generate Terraform Docs
-        uses: terraform-docs/gh-actions@v1.1.0
+        uses: terraform-docs/gh-actions@v1.4.1
         with:
           working-dir: ./
           output-file: README.md
