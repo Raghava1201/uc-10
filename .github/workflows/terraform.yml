@@ -69,7 +69,7 @@ jobs:
         working-directory: ./
 
       - name: Generate Terraform Plan
-        run: terraform plan  -out=tfplan.txt
+        run: terraform plan -lock=false -out=tfplan.txt
         working-directory: ./
 
       - name: Generate Terraform Docs
@@ -81,7 +81,7 @@ jobs:
           git-push: "true"
 
       - name: Apply Terraform
-        run: terraform apply  -auto-approve tfplan.txt
+        run: terraform apply -lock=false -auto-approve tfplan.txt
         working-directory: ./
 
 #      - name: Destroy Terraform
