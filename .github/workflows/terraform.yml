@@ -64,8 +64,8 @@ jobs:
         run: terraform init
         working-directory: ./
 
-      - name: Validate Terraform
-        run: terraform validate
+      - name: fmt and Validate Terraform
+        run: terraform fmt && terraform validate
         working-directory: ./
 
       - name: Generate Terraform Plan
