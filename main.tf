@@ -1,10 +1,10 @@
 module "ec2" {
-  source         = "./modules/ec2"
-  ami_id         = var.ami_id
-  instance_type  = var.instance_type
-  key_name       = var.key_name
-  subnet_id      = var.subnet_ids[0]
-  vpc_id         = var.vpc_id
+  source        = "./modules/ec2"
+  ami_id        = var.ami_id
+  instance_type = var.instance_type
+  key_name      = var.key_name
+  subnet_id     = var.subnet_ids[0]
+  vpc_id        = var.vpc_id
 }
 
 module "alb" {
